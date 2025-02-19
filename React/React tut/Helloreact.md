@@ -23,3 +23,10 @@ function App() {
                 phone="(212) 555-1234"
                 email="mr.whiskaz@catnap.meow"
             />
+
+
+How to setup a react project👇
+npm create vite@latest my-app --template react
+cd my-app
+npm install
+npm run dev
