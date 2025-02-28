@@ -35,3 +35,7 @@ npm run dev
 
 This stops the page from refreshing 
 event.preventDefault()
+
+
+use this for everything 👇
+import React from "react"
