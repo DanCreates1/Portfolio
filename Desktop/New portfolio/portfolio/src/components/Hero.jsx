@@ -139,8 +139,21 @@ export default function Hero() {
             <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
         </div>
         <div className="heroImage">
-            <img src="./public/pfp.png" alt="Hero" />
-            </div>
+  <div className="avatar-wrap">
+    <img className="avatar" src="/pfp.png" alt="Hero" />
+    <div className="orbit">
+      <div className="pos" style={{ '--i': 0 }}>
+        <div className="label-wrap"><span className="label">Softewere developer</span></div>
+      </div>
+      <div className="pos" style={{ '--i': 1 }}>
+        <div className="label-wrap"><span className="label">Web Developer</span></div>
+      </div>
+      <div className="pos" style={{ '--i': 2 }}>
+        <div className="label-wrap"><span className="label">web designer</span></div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   )
 }

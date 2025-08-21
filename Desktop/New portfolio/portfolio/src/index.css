@@ -65,7 +65,97 @@
   justify-content: right;
   margin-top: -70px;
 }
-.heroImage > img{
+/* your original rules (cleaned up) */
+.heroImage{
+  display: flex;
+  justify-content: flex-end; /* use flex-end instead of 'right' */
+  margin-top: -70px;
+  align-items: center;
+  /* ensure children positioned relative */
+  /* keep this if the heroImage is the main container for the avatar */
+}
+
+/* avatar + orbit wrapper */
+.heroImage .avatar-wrap{
+  /* keep width in sync with your .heroImage > img width (300px) */
+  --size: 100px;           /* change this to control avatar size */
+  --speed: 8s;             /* orbit duration */
+  --radius: calc(var(--size) * 0.9);
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  display: block;
+}
+
+/* your original rule mapped to the avatar class */
+.heroImage > img, /* if you still have img directly */
+.heroImage .avatar{
   height: auto;
-  width: 300px;
+  width: 100%;   /* avatar-wrap controls real width */
+  display: block;
+  object-fit: cover;
+  border-radius: 50%; /* keeps it rounded as fallback */
+}
+
+/* orbit (invisible container that rotates) */
+.heroImage .orbit{
+  position: absolute;
+  inset: 0;              /* fills avatar-wrap */
+  pointer-events: none;
+  transform-origin: center;
+  animation: spin linear infinite;
+  animation-duration: var(--speed);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* position anchors for each label */
+.heroImage .pos{
+  --angle: calc(var(--i) * 120deg); /* 3 items -> 120deg apart */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: rotate(var(--angle)) translateY(calc(-1 * var(--radius)));
+}
+
+/* counter-rotate wrapper so text starts upright */
+.heroImage .label-wrap{
+  display: inline-block;
+  transform: rotate(calc(-1 * var(--angle)));
+  transform-origin: center;
+}
+
+/* visible label */
+.heroImage .label{
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  color: #e6eef8;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+  box-shadow: 0 2px 8px rgba(2,6,23,0.6);
+  transform-origin: center;
+  pointer-events: auto; /* so user can click labels if needed */
+  /* keep label readable by counter-rotating */
+  animation: counterSpin linear infinite;
+  animation-duration: var(--speed);
+}
+
+@keyframes counterSpin { to { transform: rotate(-360deg); } }
+
+/* responsive tweak: reduce size on small screens */
+@media (max-width: 420px){
+  .heroImage .avatar-wrap{
+    --size: 14px;
+    --speed: 9s;
+    --radius: calc(var(--size) * 0.1);
+  }
+  .heroImage .label{
+    font-size: 12px;
+    padding: 5px 8px;
+  }
 }
