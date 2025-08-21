@@ -59,3 +59,13 @@
   animation:alternate 1s infinite;
   text-shadow: 0 0 20px cyan, 0 0 30px cyan, 0 0 4  402px cyan;
 }
+
+.heroImage{
+  display: flex;
+  justify-content: right;
+  margin-top: -70px;
+}
+.heroImage > img{
+  height: auto;
+  width: 300px;
+}

@@ -137,8 +137,10 @@ export default function Hero() {
         <div className="welcome">
             <h1> {displayedText}<span className="typerPointer">|</span></h1>
             <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
-
         </div>
+        <div className="heroImage">
+            <img src="./public/pfp.png" alt="Hero" />
+            </div>
     </div>
   )
 }
