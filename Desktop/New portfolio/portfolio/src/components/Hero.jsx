@@ -57,7 +57,7 @@ export default function Hero() {
   "Selamat datang", // Indonesian / Malay
   "Chào mừng", // Vietnamese
   "ຍິນດີຕ້ອນຮັບ", // Lao
-  "សូមស្វាគមន៍ sva kum)", // Khmer
+  "សូមស្វាគមន៍", // Khmer
   "မင်္ဂလာပါ", // Burmese
   "Karibu", // Swahili
   "Ongi etorri", // Basque
@@ -146,7 +146,7 @@ export default function Hero() {
 
           <div
             className="orbit"
-            style={{ ["--r"]: "120px", ["--speed"]: "8s" }}
+            style={{ ["--r"]: "130px", ["--speed"]: "8s" }}
           >
             <div className="word" style={{ ["--angle"]: "0deg" }}>
               <div className="inner"><span>Motivate</span></div>
@@ -182,6 +182,11 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+    <div className="status">
+      <div><span className="status-dot" aria-hidden="true"></span>Online</div>
+    </div>
+
     </div>
   )
 }

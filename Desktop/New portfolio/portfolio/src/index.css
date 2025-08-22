@@ -16,6 +16,7 @@
 .navBar{
   display: flex;
   justify-content: center;
+  margin-top: 1.3rem;
 }
 
 .navBar > ul{
@@ -47,7 +48,7 @@
 
 
 .welcome{
-  margin-top: 10%;
+  margin-top: 8%;
   font-size: 1.4rem;
 }        
 #dnaiel{
@@ -84,7 +85,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); 
-  width: 200px;        
+  width: 250px;        
   height: auto;
   object-fit: cover;
   border-radius: 50%;
@@ -135,6 +136,34 @@
 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes spin-reverse { to { transform: rotate(-360deg); } }
+
+
+
+
+.status > .status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 520px) {
