@@ -138,22 +138,50 @@ export default function Hero() {
             <h1> {displayedText}<span className="typerPointer">|</span></h1>
             <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
         </div>
+
+
         <div className="heroImage">
-  <div className="avatar-wrap">
-    <img className="avatar" src="/pfp.png" alt="Hero" />
-    <div className="orbit">
-      <div className="pos" style={{ '--i': 0 }}>
-        <div className="label-wrap"><span className="label">Softewere developer</span></div>
+        <div className="scene">
+          <img className="avatar" src="/pfp.png" alt="Hero" />
+
+          <div
+            className="orbit"
+            style={{ ["--r"]: "120px", ["--speed"]: "8s" }}
+          >
+            <div className="word" style={{ ["--angle"]: "0deg" }}>
+              <div className="inner"><span>Motivate</span></div>
+            </div>
+
+            <div className="word" style={{ ["--angle"]: "45deg" }}>
+              <div className="inner"><span>Create</span></div>
+            </div>
+
+            <div className="word" style={{ ["--angle"]: "90deg" }}>
+              <div className="inner"><span>Ship</span></div>
+            </div>
+
+            <div className="word" style={{ ["--angle"]: "135deg" }}>
+              <div className="inner"><span>Learn</span></div>
+            </div>
+
+            <div className="word" style={{ ["--angle"]: "180deg" }}>
+              <div className="inner"><span>Code</span></div>
+            </div>
+
+            <div className="word" style={{ ["--angle"]: "225deg" }}>
+              <div className="inner"><span>Share</span></div>
+            </div>
+
+            <div className="word" style={{ ["--angle"]: "270deg" }}>
+              <div className="inner"><span>Grow</span></div>
+            </div>
+
+            <div className="word" style={{ ["--angle"]: "315deg" }}>
+              <div className="inner"><span>Repeat</span></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="pos" style={{ '--i': 1 }}>
-        <div className="label-wrap"><span className="label">Web Developer</span></div>
-      </div>
-      <div className="pos" style={{ '--i': 2 }}>
-        <div className="label-wrap"><span className="label">web designer</span></div>
-      </div>
-    </div>
-  </div>
-</div>
     </div>
   )
 }

@@ -60,102 +60,85 @@
   text-shadow: 0 0 20px cyan, 0 0 30px cyan, 0 0 4  402px cyan;
 }
 
+
 .heroImage{
   display: flex;
-  justify-content: right;
-  margin-top: -70px;
-}
-/* your original rules (cleaned up) */
-.heroImage{
-  display: flex;
-  justify-content: flex-end; /* use flex-end instead of 'right' */
-  margin-top: -70px;
+  justify-content: flex-end;
   align-items: center;
-  /* ensure children positioned relative */
-  /* keep this if the heroImage is the main container for the avatar */
+  gap: 24px;
+  margin-top: -70px;
+  flex-wrap: nowrap;
 }
 
-/* avatar + orbit wrapper */
-.heroImage .avatar-wrap{
-  /* keep width in sync with your .heroImage > img width (300px) */
-  --size: 100px;           /* change this to control avatar size */
-  --speed: 8s;             /* orbit duration */
-  --radius: calc(var(--size) * 0.9);
-  width: var(--size);
-  height: var(--size);
-  position: relative;
-  display: block;
+
+.scene{
+  width: 320px;         
+  height: 320px;        
+  position: relative;   
+  flex: 0 0 320px;
 }
 
-/* your original rule mapped to the avatar class */
-.heroImage > img, /* if you still have img directly */
-.heroImage .avatar{
-  height: auto;
-  width: 100%;   /* avatar-wrap controls real width */
-  display: block;
-  object-fit: cover;
-  border-radius: 50%; /* keeps it rounded as fallback */
-}
 
-/* orbit (invisible container that rotates) */
-.heroImage .orbit{
-  position: absolute;
-  inset: 0;              /* fills avatar-wrap */
-  pointer-events: none;
-  transform-origin: center;
-  animation: spin linear infinite;
-  animation-duration: var(--speed);
-}
-
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* position anchors for each label */
-.heroImage .pos{
-  --angle: calc(var(--i) * 120deg); /* 3 items -> 120deg apart */
+.scene .avatar{
   position: absolute;
   left: 50%;
   top: 50%;
-  transform-origin: center;
-  transform: rotate(var(--angle)) translateY(calc(-1 * var(--radius)));
+  transform: translate(-50%, -50%); 
+  width: 200px;        
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 3;           
+  pointer-events: auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
 }
 
-/* counter-rotate wrapper so text starts upright */
-.heroImage .label-wrap{
-  display: inline-block;
-  transform: rotate(calc(-1 * var(--angle)));
-  transform-origin: center;
-}
+.scene .orbit{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transform-origin: 50% 50%;
+  animation: spin var(--speed, 10s) linear infinite;
+} 
 
-/* visible label */
-.heroImage .label{
-  display: inline-block;
+.scene .word{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: rotate(var(--angle)) translateX(var(--r, 120px));
+  transform-origin: 0 0;
   white-space: nowrap;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-  color: #e6eef8;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.35);
-  box-shadow: 0 2px 8px rgba(2,6,23,0.6);
-  transform-origin: center;
-  pointer-events: auto; /* so user can click labels if needed */
-  /* keep label readable by counter-rotating */
-  animation: counterSpin linear infinite;
-  animation-duration: var(--speed);
+  z-index: 2;
+  pointer-events: auto;
 }
 
-@keyframes counterSpin { to { transform: rotate(-360deg); } }
+.scene .inner{
+  display: inline-block;
+  animation: spin-reverse var(--speed, 10s) linear infinite;
+  transform-origin: center;
+}
 
-/* responsive tweak: reduce size on small screens */
-@media (max-width: 420px){
-  .heroImage .avatar-wrap{
-    --size: 14px;
-    --speed: 9s;
-    --radius: calc(var(--size) * 0.1);
-  }
-  .heroImage .label{
-    font-size: 12px;
-    padding: 5px 8px;
-  }
+
+.scene .inner span{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  
+  font-weight: 600;
+  transform: rotate(calc(-1 * var(--angle)));
+  pointer-events: auto;
+}
+
+
+.scene .word:hover .inner { animation-play-state: paused; }
+
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin-reverse { to { transform: rotate(-360deg); } }
+
+
+@media (max-width: 520px) {
+  .scene{ width: 220px; height: 220px; flex: 0 0 220px; }
+  .scene .avatar{ width: 90px; height: 90px; }
+  .scene .inner span{ font-size: 13px; padding: 5px 8px; }
 }
