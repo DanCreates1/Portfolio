@@ -166,6 +166,8 @@
 
 
 
+
+
 @media (max-width: 520px) {
   .scene{ width: 220px; height: 220px; flex: 0 0 220px; }
   .scene .avatar{ width: 90px; height: 90px; }
