@@ -130,15 +130,11 @@
   pointer-events: auto;
 }
 
-
 .scene .word:hover .inner { animation-play-state: paused; }
 
 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes spin-reverse { to { transform: rotate(-360deg); } }
-
-
-
 
 .status > .status-dot {
   width: 10px;
