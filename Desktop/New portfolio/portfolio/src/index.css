@@ -136,15 +136,20 @@
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes spin-reverse { to { transform: rotate(-360deg); } }
 
-.status > .status-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: green;
-  display: inline-block;
-  margin-right: 8px;
+
+
+#greenDot{
+  animation: pulse 1.5s infinite;
 }
 
+@keyframes pulse {
+  0%, 100%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+}
 
 
 
