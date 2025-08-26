@@ -137,6 +137,14 @@
 @keyframes spin-reverse { to { transform: rotate(-360deg); } }
 
 
+.status{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  justify-content: baseline;
+}
 
 #greenDot{
   animation: pulse 1.5s infinite;
