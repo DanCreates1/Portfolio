@@ -123,6 +123,29 @@ export default function Hero() {
 
 
   useEffect(() => {}, [displayedText]);
+
+
+   const [years, setYears] = useState(0);
+
+  useEffect(() => {
+    const startDate = new Date("2010-05-18");
+
+    const updateTimer = () => {
+      const now = new Date();
+      const diff = now - startDate;
+      const yearsInMs = 1000 * 60 * 60 * 24 * 365.2425; 
+      const yearsPassed = diff / yearsInMs;
+      setYears(yearsPassed.toFixed(10));
+    };
+
+    const interval = setInterval(updateTimer, 100);
+    updateTimer(); 
+
+    return () => clearInterval(interval);
+  }, []);
+
+
+
   return (
     <div className="hero">
         <div className="navBar">
@@ -139,6 +162,18 @@ export default function Hero() {
             <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
         </div>
 
+          <span className="overView">
+
+      <span className="location">
+        <i class="fa-solid fa-location-dot">Canada, Ontario</i>
+      </span>
+
+      <span className="age" id="timer"><i class="fa-solid fa-hourglass-half">{years} old  </i></span>
+
+      <span className="roll"><i class="fa-solid fa-code">FullStack Developer</i></span>
+
+      <span className="student"><i class="fa-solid fa-graduation-cap">IB student</i></span>
+    </span>
 
         <div className="heroImage">
         <div className="scene">
@@ -186,19 +221,6 @@ export default function Hero() {
     <div className="status">
       <i className="fa-solid fa-circle" id="greenDot" style={{ color: "#12d339" }}></i>
       <span>Locked in</span>
-    </div>
-
-    <div className="overView">
-
-      <div className="location">
-        <i class="fa-solid fa-location-dot"></i>
-      </div>
-
-      <div className="age"><i class="fa-solid fa-hourglass-half"></i></div>
-
-      <div className="roll"><i class="fa-solid fa-code"></i></div>
-
-      <div className="student"><i class="fa-solid fa-graduation-cap"></i></div>
     </div>
 
     </div>
