@@ -66,6 +66,7 @@
   flex-direction: column;
   gap: 15px;
   margin-top: 20px;
+  justify-content: space-around;
 }
 .overView > span{
   font-size: 1.2rem;
@@ -74,8 +75,8 @@
 
 .overView > span > i{
   justify-content: space-between;
+  margin-right: 10px; 
 }
-
 
 .heroImage{
   display: flex;

@@ -170,16 +170,19 @@ export default function Hero() {
       </span>
 
       <span className="age" id="timer">
-        <i class="fa-solid fa-hourglass-half" style={{}}> </i>
+        <i class="fa-solid fa-hourglass-half" style={{color: " #cfcfcf"}}> </i>
         {years}  Years Old
       </span>
 
       <span className="roll">
-        <i class="fa-solid fa-code" style={{}}></i>
+        <i class="fa-solid fa-code" style={{color: " #cfcfcf"}}></i>
         FullStack Developer
       </span>
 
-      <span className="student"><i class="fa-solid fa-graduation-cap" style={{}}>IB student</i></span>
+      <span className="student">
+          <i class="fa-solid fa-graduation-cap" style={{color: " #cfcfcf"}}></i>
+          IB student
+        </span>
     </span>
 
         <div className="heroImage">
