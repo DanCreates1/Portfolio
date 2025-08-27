@@ -181,12 +181,12 @@ export default function Hero() {
             </div>
           </div>
         </div>
+      </div>
+
     <div className="status">
       <i className="fa-solid fa-circle" id="greenDot" style={{ color: "#12d339" }}></i>
       <span>Locked in</span>
     </div>
-      </div>
-
 
     </div>
   )

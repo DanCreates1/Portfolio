@@ -67,7 +67,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 24px;
-  margin-top: -70px;
+  margin-top: -90px;
   flex-wrap: nowrap;
 }
 
@@ -141,9 +141,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 3rem;
+  margin-top: 3.9rem;
   font-size: 1.1rem;
-  justify-content: baseline;
+  justify-content: flex-end;
+  margin-right: 10%;
 }
 
 #greenDot{
@@ -158,17 +159,6 @@
     transform: scale(1.2);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
