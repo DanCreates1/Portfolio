@@ -188,6 +188,19 @@ export default function Hero() {
       <span>Locked in</span>
     </div>
 
+    <div className="overView">
+
+      <div className="location">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+
+      <div className="age"><i class="fa-solid fa-hourglass-half"></i></div>
+
+      <div className="roll"><i class="fa-solid fa-code"></i></div>
+
+      <div className="student"><i class="fa-solid fa-graduation-cap"></i></div>
+    </div>
+
     </div>
   )
 }
