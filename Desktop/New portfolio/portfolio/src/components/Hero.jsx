@@ -165,14 +165,21 @@ export default function Hero() {
           <span className="overView">
 
       <span className="location">
-        <i class="fa-solid fa-location-dot">Canada, Ontario</i>
+        <i class="fa-solid fa-location-dot" style={{ color: " #cfcfcf"}}></i>
+        Canada, Ontario
       </span>
 
-      <span className="age" id="timer"><i class="fa-solid fa-hourglass-half">{years} old  </i></span>
+      <span className="age" id="timer">
+        <i class="fa-solid fa-hourglass-half" style={{}}> </i>
+        {years}  Years Old
+      </span>
 
-      <span className="roll"><i class="fa-solid fa-code">FullStack Developer</i></span>
+      <span className="roll">
+        <i class="fa-solid fa-code" style={{}}></i>
+        FullStack Developer
+      </span>
 
-      <span className="student"><i class="fa-solid fa-graduation-cap">IB student</i></span>
+      <span className="student"><i class="fa-solid fa-graduation-cap" style={{}}>IB student</i></span>
     </span>
 
         <div className="heroImage">
@@ -219,7 +226,7 @@ export default function Hero() {
       </div>
 
     <div className="status">
-      <i className="fa-solid fa-circle" id="greenDot" style={{ color: "#12d339" }}></i>
+      <i className="fa-solid fa-circle  fa-beat" id="greenDot" style={{ color: "#12d339" }}></i>
       <span>Locked in</span>
     </div>
 
