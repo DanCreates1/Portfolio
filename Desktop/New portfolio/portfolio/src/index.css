@@ -65,11 +65,11 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
   justify-content: space-around;
 }
 .overView > span{
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   gap: 10px;
 }
 

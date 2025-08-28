@@ -176,7 +176,7 @@ export default function Hero() {
 
       <span className="roll">
         <i class="fa-solid fa-code" style={{color: " #cfcfcf"}}></i>
-        FullStack Developer
+        Front-End Developer
       </span>
 
       <span className="student">
@@ -214,7 +214,7 @@ export default function Hero() {
             </div>
 
             <div className="word" style={{ ["--angle"]: "225deg" }}>
-              <div className="inner"><span>Share</span></div>
+              <div className="inner"><span>Front-End</span></div>
             </div>
 
             <div className="word" style={{ ["--angle"]: "270deg" }}>
