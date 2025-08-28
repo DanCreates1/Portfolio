@@ -164,6 +164,13 @@
 }
 
 
+.scrollDown{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  font-size: 3.5rem;
+}
+
 
 
 

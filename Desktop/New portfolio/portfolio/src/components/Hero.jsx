@@ -233,6 +233,9 @@ export default function Hero() {
       <span>Locked in</span>
     </div>
 
+    <div className="scrollDown">
+      <i className="fa-solid fa-arrow-down fa-bounce" style={{ color: "#cfcfcf" }}></i>
+    </div>
     </div>
   )
 }
