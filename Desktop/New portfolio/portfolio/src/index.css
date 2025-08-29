@@ -59,6 +59,7 @@
 .welcome{
   margin-top: 8%;
   font-size: 1.4rem;
+  height: 50px; 
 }        
 #dnaiel{
   color: cyan;
