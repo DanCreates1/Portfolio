@@ -34,7 +34,6 @@
   font-size: 1.2rem;
 }
 
-
 .navBar > ul > li > a {
   text-decoration: none;
   display: inline-block;
@@ -54,7 +53,6 @@
           0%, 50%, 100% { opacity: 1; }
           25%, 75% { opacity: 0; }
         }
-
 
 .welcome{
   margin-top: 8%;
@@ -104,7 +102,6 @@
   position: relative;   
   flex: 0 0 320px;
 }
-
 
 .scene .avatar{
   position: absolute;
@@ -180,13 +177,6 @@
   margin-top: 1.5rem;
   font-size: 3.5rem;
 }
-
-
-
-
-
-
-
 
 @media (max-width: 520px) {
   .scene{ width: 220px; height: 220px; flex: 0 0 220px; }
