@@ -142,7 +142,6 @@
   transform-origin: center;
 }
 
-
 .scene .inner span{
   display: inline-block;
   padding: 6px 10px;
@@ -155,10 +154,9 @@
 
 .scene .word:hover .inner { animation-play-state: paused; }
 
-
 @keyframes spin { to { transform: rotate(360deg); } }
-@keyframes spin-reverse { to { transform: rotate(-360deg); } }
 
+@keyframes spin-reverse { to { transform: rotate(-360deg); } }
 
 .status{
   display: flex;
@@ -169,7 +167,6 @@
   justify-content: flex-end;
   margin-right: 10%;
 }
-
 
 .scrollDown{
   display: flex;

@@ -121,9 +121,7 @@ export default function Hero() {
 
 
 
-
   useEffect(() => {}, [displayedText]);
-
 
    const [years, setYears] = useState(0);
 
