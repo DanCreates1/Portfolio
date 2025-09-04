@@ -62,6 +62,7 @@
 #dnaiel{
   color: cyan;
   text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
+  display: inline-block;
 }
 
 #dnaiel:hover {
@@ -73,7 +74,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 30px;
+  margin-top: 10vh;
   justify-content: space-around;
 }
 .overView > span{
@@ -196,6 +197,7 @@
 
 .WhoAmI > h1{
   font-size: 2.5rem;
+  color: cyan;
 }
 
 .WhoAmI > p{

@@ -158,10 +158,12 @@ export default function Hero() {
         </div>
 
         <div className="welcome">
-            <h1> {displayedText}<span className="typerPointer">|</span></h1>
-            <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
+            <h1> {displayedText}<span className="typerPointer">|</span></h1>  
         </div>
 
+        <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
+          
+          
           <span className="overView">
 
       <span className="location">
