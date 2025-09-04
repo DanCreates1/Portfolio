@@ -180,3 +180,26 @@
   .scene .avatar{ width: 90px; height: 90px; }
   .scene .inner span{ font-size: 13px; padding: 5px 8px; }
 }
+
+
+
+
+/* WhoAmI Section */
+
+.WhoAmI{
+  display: flex;
+  margin-top: 25vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 400px;
+}
+
+.WhoAmI > h1{
+  font-size: 2.5rem;
+}
+
+.WhoAmI > p{
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+}
