@@ -161,10 +161,11 @@ export default function Hero() {
             <h1> {displayedText}<span className="typerPointer">|</span></h1>  
         </div>
 
-        <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
           
           
           <span className="overView">
+            
+        <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
 
       <span className="location">
         <i class="fa-solid fa-location-dot" style={{ color: " #cfcfcf"}}></i>

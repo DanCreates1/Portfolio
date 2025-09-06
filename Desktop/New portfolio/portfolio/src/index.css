@@ -56,6 +56,7 @@
 
 .welcome{
   margin-top: 8%;
+  transform: translateY(100%);
   font-size: 1.4rem;
   height: 50px; 
 }        
@@ -87,6 +88,11 @@
   margin-right: 10px; 
 }
 
+.overView > p{
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
 .heroImage{
   display: flex;
   justify-content: flex-end;
@@ -98,6 +104,7 @@
 
 
 .scene{
+  margin-top: -60px;
   width: 320px;         
   height: 320px;        
   position: relative;   
@@ -196,12 +203,12 @@
 }
 
 .WhoAmI > h1{
-  font-size: 2.5rem;
+  font-size:3.5rem;
   color: cyan;
 }
 
 .WhoAmI > p{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   text-align: justify;
 }
