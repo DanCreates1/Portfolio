@@ -16,7 +16,16 @@
 .navBar{
   display: flex;
   justify-content: center;
-  margin-top: 1.3rem;
+  
+  position: fixed;      /* stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(22, 22, 22, 0.3); /* semi-transparent */
+  backdrop-filter: blur(10px);          /* the blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* for Safari */
+  z-index: 1000;
+  padding: 1rem;
 }
 
 .navBar > ul{

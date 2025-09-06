@@ -148,14 +148,14 @@ export default function Hero() {
   
   return (
     <div className="hero">
-        <div className="navBar">
+        <span className="navBar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href=".hero">Home</a></li>
+                <li><a href="#WhoAmI">About</a></li>
                 <li><a href="#services">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
+        </span>
 
         <div className="welcome">
             <h1> {displayedText}<span className="typerPointer">|</span></h1>  
@@ -164,7 +164,7 @@ export default function Hero() {
           
           
           <span className="overView">
-            
+
         <p>I'm <span id="dnaiel">Daniel</span> (AKA: Pouyan)</p>
 
       <span className="location">

@@ -1,5 +1,6 @@
 export default function WhoAmI() {
    return (
+      <section id="WhoAmI">
     <div className="WhoAmI">
       <h1>Who Am I?</h1>
       <p>
@@ -9,5 +10,6 @@ export default function WhoAmI() {
         This portfolio highlights ongoing work and progress in both academics and personal development.
        </p>
       </div>
+      </section>
    )
 }
