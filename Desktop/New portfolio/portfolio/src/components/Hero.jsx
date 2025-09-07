@@ -148,9 +148,10 @@ export default function Hero() {
   
   return (
     <div className="hero">
+      <h1 id="hero"></h1>
         <span className="navBar">
             <ul>
-                <li><a href=".hero">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#WhoAmI">About</a></li>
                 <li><a href="#services">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>

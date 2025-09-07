@@ -6,6 +6,7 @@
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+   scroll-margin-top: 80px;
 }
 
 .hero{
@@ -213,11 +214,22 @@
 
 .WhoAmI > h1{
   font-size:3.5rem;
+}
+.WhoAmI > h1 > span{
   color: cyan;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
 }
 
 .WhoAmI > p{
   font-size: 1.5rem;
   line-height: 1.8;
   text-align: justify;
+}
+
+.WhoAmI > img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;   /* crop to fill box */
+  border-radius: 50%;  /* optional: make it circular */
 }
