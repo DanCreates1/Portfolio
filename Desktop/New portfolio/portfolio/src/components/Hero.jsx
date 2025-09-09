@@ -153,11 +153,11 @@ export default function Hero() {
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#WhoAmI">About</a></li>
-                <li><a href="#services">Projects</a></li>
+                <li><a href="#Projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </span>
-
+        
         <div className="welcome">
             <h1> {displayedText}<span className="typerPointer">|</span></h1>  
         </div>

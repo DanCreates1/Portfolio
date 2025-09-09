@@ -8,12 +8,11 @@ export default function Projects() {
           <div className="projectCards">
            
             <div className="card">
-              <img src="" alt="" />
+              <img src=" /projectsImg/codeva.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
               
-              // use the img below for the tech stuff used to build it
-              <img src="" alt="" />
+    
             </div>
 
     
