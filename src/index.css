@@ -247,17 +247,32 @@
   gap: 2rem;
 }
 
+
 .Projects > h1{
  display: flex;
 justify-content: center;
   font-size:3.5rem;
 }
 
-.Projects > .projectCards{
+.projectCards{
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.card{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 2px solid rgb(59, 59, 59);
+  border-radius: 20px;
+  padding: 1rem;
+  
+  background-color: #121A1E; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .card > img {
@@ -265,4 +280,9 @@ justify-content: center;
   height: 300px;
   object-fit: cover; 
   border-radius: 10px;
+}
+
+.card > h2,
+.card > p {
+  background: transparent;
 }
