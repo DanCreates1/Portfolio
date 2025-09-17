@@ -20,7 +20,7 @@ export default function Projects() {
             </div>
 
              <div className="card">
-              <img src=" /projectsImg/codeva.png" alt=""  />
+              <img src=" /projectsImg/oldPortfolio.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
             </div>
