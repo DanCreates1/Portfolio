@@ -11,42 +11,42 @@ export default function Projects() {
               <img src=" /projectsImg/codeva.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
-              <button>View Project</button>
+              <a href="https://www.codeva.xyz"  target="_blank"><button>View Project</button></a>
             </div>
 
             <div className="card">
               <img src=" /projectsImg/cars.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
-              <button>View Project</button>
+              <a href=""  target="_blank"><button>View Project</button></a>
             </div>
 
              <div className="card">
               <img src=" /projectsImg/revenda.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
-              <button>View Project</button>
+              <a href=""  target="_blank"><button>View Project</button></a>
             </div>
 
              <div className="card">
               <img src=" /projectsImg/oldPortfolio.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
-              <button>View Project</button>
+              <a href=""  target="_blank"><button>View Project</button></a>
             </div>
 
       <div className="card">
               <img src=" /projectsImg/Dusic.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
-              <button>View Project</button>
+              <a href=""  target="_blank"><button>View Project</button></a>
             </div>
 
             <div className="card">
               <img src=" /projectsImg/hackApathBot.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
-              <button>View Project</button>
+              <a href=""  target="_blank"><button>View Project</button></a>
             </div>
 
 
