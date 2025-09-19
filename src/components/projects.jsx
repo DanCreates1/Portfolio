@@ -23,23 +23,23 @@ export default function Projects() {
 
              <div className="card">
               <img src=" /projectsImg/revenda.png" alt=""  />
-              <h2>Project 1</h2>
+              <h2>Revenda</h2>
               <p>Description of Project 1</p>
-              <a href=""  target="_blank"><button>View Project</button></a>
+              <a href="https://rendeva.vercel.app"  target="_blank"><button>View Project</button></a>
             </div>
 
              <div className="card">
               <img src=" /projectsImg/oldPortfolio.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
-              <a href=""  target="_blank"><button>View Project</button></a>
+              <a href="https://dancreates1.github.io/Pouyan"  target="_blank"><button>View Project</button></a>
             </div>
 
       <div className="card">
               <img src=" /projectsImg/Dusic.png" alt=""  />
               <h2>Project 1</h2>
               <p>Description of Project 1</p>
-              <a href=""  target="_blank"><button>View Project</button></a>
+              <a href="https://github.com/DanCreates1/Dusic"  target="_blank"><button>View Project</button></a>
             </div>
 
             <div className="card">
