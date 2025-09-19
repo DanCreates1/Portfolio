@@ -9,16 +9,16 @@ export default function Projects() {
            
             <div className="card">
               <img src=" /projectsImg/codeva.png" alt=""  />
-              <h2>Project 1</h2>
+              <h2>Codeva Front-end</h2>
               <p>Description of Project 1</p>
               <a href="https://www.codeva.xyz"  target="_blank"><button>View Project</button></a>
             </div>
 
             <div className="card">
               <img src=" /projectsImg/cars.png" alt=""  />
-              <h2>Project 1</h2>
+              <h2>Cars</h2>
               <p>Description of Project 1</p>
-              <a href=""  target="_blank"><button>View Project</button></a>
+              <a href="https://cars-phi-ten.vercel.app"  target="_blank"><button>View Project</button></a>
             </div>
 
              <div className="card">
