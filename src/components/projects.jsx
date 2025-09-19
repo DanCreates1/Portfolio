@@ -37,18 +37,17 @@ export default function Projects() {
 
       <div className="card">
               <img src=" /projectsImg/Dusic.png" alt=""  />
-              <h2>Project 1</h2>
+              <h2>Dusic</h2>
               <p>Description of Project 1</p>
               <a href="https://github.com/DanCreates1/Dusic"  target="_blank"><button>View Project</button></a>
             </div>
 
             <div className="card">
               <img src=" /projectsImg/hackApathBot.png" alt=""  />
-              <h2>Project 1</h2>
+              <h2>My Path To Tech</h2>
               <p>Description of Project 1</p>
-              <a href=""  target="_blank"><button>View Project</button></a>
+              <a href="https://github.com/Mypath2tech-admin/discord-bot"  target="_blank"><button>View Project</button></a>
             </div>
-
 
           </div>
         </section>
