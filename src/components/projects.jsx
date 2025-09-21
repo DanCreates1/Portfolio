@@ -10,7 +10,7 @@ export default function Projects() {
             <div className="card">
               <img src=" /projectsImg/codeva.png" alt=""  />
               <h2>Codeva Front-end</h2>
-              <p>Description of Project 1</p>
+              <p>Me and the Front-End team of the Codeva worked to gether to make this website live and ready for production</p>
               <a href="https://www.codeva.xyz"  target="_blank"><button>View Project</button></a>
             </div>
 
@@ -48,7 +48,6 @@ export default function Projects() {
               <p>Description of Project 1</p>
               <a href="https://github.com/Mypath2tech-admin/discord-bot"  target="_blank"><button>View Project</button></a>
             </div>
-
           </div>
         </section>
     )
