@@ -8,9 +8,12 @@ export default function Projects() {
           <div className="projectCards">
            
             <div className="card">
-              <img src=" /projectsImg/codeva.png" alt=""  />
+              <img src=" /projectsImg/codeva.png" alt="Project Codeva picture"  />
               <h2>Codeva Front-end</h2>
               <p>Me and the Front-End team of the Codeva worked to gether to make this website live and ready for production</p>
+              <div className="techStack">
+                <i class="fa-brands fa-react"></i>
+              </div>
               <a href="https://www.codeva.xyz"  target="_blank"><button>View Project</button></a>
             </div>
 
