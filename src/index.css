@@ -285,6 +285,7 @@ justify-content: center;
 .card > h2,
 .card > p {
   background: transparent;
+  max-width: 400px;
 }
 
 .card > button,
