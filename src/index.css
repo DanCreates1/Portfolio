@@ -328,7 +328,8 @@ justify-content: center;
   background-color: transparent;
 }
 
-.card > .techStack > i{
+.card > .techStack  > i{
   font-size: 1.5rem;
   color: cyan;
+  background-color: transparent;
 }
