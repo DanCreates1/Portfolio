@@ -12,7 +12,16 @@ export default function Projects() {
               <h2>Codeva Front-end</h2>
               <p>Me and the Front-End team of the Codeva worked to gether to make this website live and ready for production</p>
               <div className="techStack">
-                <i class="fa-brands fa-react"></i>
+                <span>
+                  <i class="fa-brands fa-react"  style={{ color: "cyan" }}></i>
+                  <span className="tooltip">React</span>
+                </span>
+                
+                <span>
+                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
+                  <span className="tooltip">JavaScript</span>
+                </span>
+
               </div>
               <a href="https://www.codeva.xyz"  target="_blank"><button>View Project</button></a>
             </div>
