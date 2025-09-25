@@ -16,6 +16,8 @@ export default function Projects() {
                   <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
                   <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
                   <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
+                  <img src="tailwindCssLogo.png" alt="tailwind Css Logo" />
+                  <i class="fa-brands fa-npm" style={{ color: "#CC3534" }}></i>
 
               </div>
               <a href="https://www.codeva.xyz"  target="_blank"><button>View Project</button></a>
@@ -24,7 +26,7 @@ export default function Projects() {
             <div className="card">
               <img src=" /projectsImg/cars.png" alt=""  />
               <h2>Cars</h2>
-              <p>Description of Project 1</p>
+              <p></p>
               <a href="https://cars-phi-ten.vercel.app"  target="_blank"><button>View Project</button></a>
             </div>
 

@@ -336,3 +336,9 @@ justify-content: center;
 .card > .techStack  > i {
   background: transparent;
 }
+
+.card > .techStack  > img {
+  width: 40px;
+  height: 30px;
+  background: transparent;
+}
