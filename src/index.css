@@ -337,29 +337,5 @@ justify-content: center;
   background: transparent;
 }
 
-.tooltip {
-  visibility: hidden;
-  opacity: 0;
-  background: black;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  position: absolute;
-  bottom: 125%; /* position above the icon */
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity 0.3s ease-in-out;
-  white-space: nowrap;
-  z-index: 10;
-}
 
-.techStack {
-  position: relative; /* important so tooltip positions relative to icon */
-  display: inline-block;
-}
 
-.techStack:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
