@@ -328,14 +328,11 @@ justify-content: center;
   background-color: transparent;
 }
 
-.card > .techStack > span{
-  font-size: 1.5rem;
-  background-color: transparent;
-}
 
 .card > .techStack {
+  font-size: 2rem;
   background: transparent;
 }
-
-
-
+.card > .techStack  > i {
+  background: transparent;
+}
