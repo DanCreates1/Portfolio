@@ -26,7 +26,17 @@ export default function Projects() {
             <div className="card">
               <img src=" /projectsImg/cars.png" alt=""  />
               <h2>Cars</h2>
-              <p></p>
+              <p>This was my frst React project which demonstrate my early React skills,
+                  I made my own Data set for the Cars and soon I will realse it's own unique API
+              </p>
+              <div className="techStack">
+              <i class="fa-brands fa-react"  style={{ color: "cyan" }}></i>
+                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
+                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
+                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
+                  <img src="tailwindCssLogo.png" alt="tailwind Css Logo" />
+                  <i class="fa-brands fa-npm" style={{ color: "#CC3534" }}></i>
+                  </div>
               <a href="https://cars-phi-ten.vercel.app"  target="_blank"><button>View Project</button></a>
             </div>
 
