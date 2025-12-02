@@ -44,9 +44,8 @@ export default function Projects() {
               <img src=" /projectsImg/revenda.png" alt=""  />
               <h2>Revenda</h2>
               <p>
-                Revenda is a modern, conversion-focused website built for a web design agency. The project includes
-                a clean layout, bold typography, and a fully responsive design optimized for both desktop and mobile users.
-                The goal was to establish a strong brand presence while improving user flow and clarity of services.
+                A clean and modern website I built for a web design agency.
+                It highlights their services and branding with a fully responsive layout.
               </p>
               <a href="https://rendeva.vercel.app"  target="_blank"><button>View Project</button></a>
             </div>
