@@ -23,8 +23,6 @@ export default function Projects() {
               <a href="https://www.codeva.xyz"  target="_blank"><button>View Project</button></a>
             </div>
             
-            
-
             <div className="card">
               <img src=" /projectsImg/ASL.png" alt=""  />
               <h2>AI Sign Language Detector</h2>
@@ -34,6 +32,9 @@ export default function Projects() {
               </p>
               <div className="techStack">
                   <img src="/ProgrammingIcons/python.png" alt="tailwind Css Logo" />
+                  <img src="/ProgrammingIcons/scikitLearn.png" alt="scikitLearn logo" />
+                  <img src="/ProgrammingIcons/numpy" alt="numpy" />
+                  <img src="/ProgrammingIcons/Tensorflow_logo.svg.png" alt="Tensorflow logo" />
                   </div>
               <a href="https://cars-phi-ten.vercel.app"  target="_blank"><button>View Project</button></a>
             </div>
@@ -68,8 +69,6 @@ export default function Projects() {
               <a href="https://dancreates1.github.io/Pouyan"  target="_blank"><button>View Project</button></a>
             </div>
 
-
-
             <div className="card">
                 <img src=" /projectsImg/portfolioV2.png" alt=""  />
                 <h2>Portfolio V2</h2>
@@ -86,7 +85,6 @@ export default function Projects() {
                     </div>
                 <a href="https://dancreates1.github.io/Dan-Creates/"  target="_blank"><button>View Project</button></a>
             </div>
-
 
       <div className="card">
               <img src=" /projectsImg/Dusic.png" alt=""  />
