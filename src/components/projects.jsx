@@ -47,20 +47,43 @@ export default function Projects() {
                 A clean and modern website I built for a web design agency.
                 It highlights their services and branding with a fully responsive layout.
               </p>
+               <div className="techStack">
+                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
+                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
+                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
+                  </div>
               <a href="https://rendeva.vercel.app"  target="_blank"><button>View Project</button></a>
             </div>
 
              <div className="card">
               <img src=" /projectsImg/oldPortfolio.png" alt=""  />
-              <h2>Project 1</h2>
-              <p>Description of Project 1</p>
+              <h2>First portfolio</h2>
+              <p>
+                My first ever portfolio website, where I learned the
+                basics of web design, layout, and responsive pages.
+              </p>
+              <div className="techStack">
+                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
+                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
+                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
+                  </div>
               <a href="https://dancreates1.github.io/Pouyan"  target="_blank"><button>View Project</button></a>
             </div>
 
       <div className="card">
               <img src=" /projectsImg/Dusic.png" alt=""  />
               <h2>Dusic</h2>
-              <p>Description of Project 1</p>
+              <p>
+                Dusic is a lightweight web tool that displays your current Spotify track in
+                real time, designed to make sharing what you’re listening to simple and stylish.
+              </p>
+               <div className="techStack">
+              <i class="fa-brands fa-react"  style={{ color: "cyan" }}></i>
+                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
+                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
+                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
+                  <i class="fa-brands fa-npm" style={{ color: "#CC3534" }}></i>
+                  </div>
               <a href="https://github.com/DanCreates1/Dusic"  target="_blank"><button>View Project</button></a>
             </div>
 
