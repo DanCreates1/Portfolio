@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import WhoAmI from './components/WhoAmI'
 import Projects from './components/projects'
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Contact from './components/Contact'
 
 
 
@@ -14,6 +15,7 @@ function App() {
        <Hero/>
        <WhoAmI/>
        <Projects/>
+      <Contact/>
     </div>
   )
 }

@@ -104,12 +104,7 @@ export default function Projects() {
               <a href="https://github.com/DanCreates1/Dusic"  target="_blank"><button>View Project</button></a>
             </div>
 
-            <div className="card">
-              <img src=" /projectsImg/hackApathBot.png" alt=""  />
-              <h2>My Path To Tech</h2>
-              <p>Description of Project 1</p>
-              <a href="https://github.com/Mypath2tech-admin/discord-bot"  target="_blank"><button>View Project</button></a>
-            </div>
+            
           </div>
         </section>
     )
