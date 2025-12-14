@@ -1,5 +1,8 @@
 export default function WhoAmI() {
+   console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID);
+
    return (
+      
       <section id="WhoAmI">
     <div className="WhoAmI">
       <h1>Who Am <span>I</span>?</h1>
