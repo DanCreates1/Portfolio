@@ -47,7 +47,6 @@
 
 .navBar > ul > li > a {
   text-decoration: none;
-  display:;
   transition: transform 0.5s ease-in-out, color 0.3s, text-shadow 0.3s;
 }
 
