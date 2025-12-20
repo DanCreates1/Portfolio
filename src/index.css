@@ -113,6 +113,19 @@
   flex-wrap: nowrap;
 }
 
+#getInTouchButton{
+  width: 150px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: cyan;
+  background: transparent;
+  border: 2px solid cyan;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
 
 .scene{
   margin-top: -60px;

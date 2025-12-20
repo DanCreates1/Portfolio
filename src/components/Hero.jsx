@@ -187,6 +187,8 @@ export default function Hero() {
           <i class="fa-solid fa-graduation-cap" style={{color: " #cfcfcf"}}></i>
           IB student
         </span>
+
+        <button id="getInTouchButton">Get In Touch</button>
     </span>
 
         <div className="heroImage">
