@@ -27,24 +27,61 @@ export default function RubiksCube() {
     container.appendChild(renderer.domElement);
 
     // Lights
-    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
-    const light = new THREE.DirectionalLight(0xffffff, 0.8);
-    light.position.set(10, 10, 10);
-    scene.add(light);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.45));
+
+const keyLight = new THREE.DirectionalLight(0xffffff, 0.9);
+keyLight.position.set(6, 8, 10);
+scene.add(keyLight);
+
+const rimLight = new THREE.DirectionalLight(0x88aaff, 0.4);
+rimLight.position.set(-6, -4, -6);
+scene.add(rimLight);
+
 
     // Rubik’s Cube
     const cubeGroup = new THREE.Group();
-    const size = 0.98;
+    const size = 0.95;
     const geometry = new THREE.BoxGeometry(size, size, size);
 
-    const materials = [
-      new THREE.MeshStandardMaterial({ color: 0xff0000 }), // red
-      new THREE.MeshStandardMaterial({ color: 0xffa500 }), // orange
-      new THREE.MeshStandardMaterial({ color: 0xffffff }), // white
-      new THREE.MeshStandardMaterial({ color: 0xffff00 }), // yellow
-      new THREE.MeshStandardMaterial({ color: 0x00ff00 }), // green
-      new THREE.MeshStandardMaterial({ color: 0x0000ff })  // blue
-    ];
+   const materials = [
+  new THREE.MeshPhysicalMaterial({
+    color: 0xff3b3b,
+    roughness: 0.35,
+    metalness: 0.05,
+    clearcoat: 0.4
+  }),
+  new THREE.MeshPhysicalMaterial({
+    color: 0xff8c1a,
+    roughness: 0.35,
+    metalness: 0.05,
+    clearcoat: 0.4
+  }),
+  new THREE.MeshPhysicalMaterial({
+    color: 0xf5f5f5,
+    roughness: 0.3,
+    metalness: 0.05,
+    clearcoat: 0.45
+  }),
+  new THREE.MeshPhysicalMaterial({
+    color: 0xffd500,
+    roughness: 0.3,
+    metalness: 0.05,
+    clearcoat: 0.45
+  }),
+  new THREE.MeshPhysicalMaterial({
+    color: 0x00d26a,
+    roughness: 0.35,
+    metalness: 0.05,
+    clearcoat: 0.4
+  }),
+  new THREE.MeshPhysicalMaterial({
+    color: 0x1e6bff,
+    roughness: 0.35,
+    metalness: 0.05,
+    clearcoat: 0.4
+  })
+];
+
 
     for (let x = -1; x <= 1; x++) {
       for (let y = -1; y <= 1; y++) {
