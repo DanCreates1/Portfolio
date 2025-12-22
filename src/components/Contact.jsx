@@ -37,6 +37,7 @@ const Contact = () => {
                 subject: '',
                 message: '',
             });
+            
 
             setTimeout(() => setSubmitted(false), 3000);
         })
