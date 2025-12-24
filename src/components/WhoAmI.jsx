@@ -3,10 +3,10 @@ export default function WhoAmI() {
    return (
       
    <section id="WhoAmI">
-         <div className="CubeAndWhoAmI">
-            <div>Who Am <span>I</span>?</div>
-               <RubiksCube/>
+         <div className="WhoAmI">
+            <div>Who Am <span className="WhoAmISpan">I</span> ?</div>
             </div>
+               <RubiksCube/>
             <div classNamre="WhoAmIText">
                Grade 10 student in the IB program with a focus on coding, fitness, and continuous learning. 
                I enjoy building web applications that are practical and easy to use, while developing skills

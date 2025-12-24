@@ -131,10 +131,19 @@ scene.add(rimLight);
     <div
       ref={containerRef}
       style={{
-        width: "100%",
+        width: "40%",
+        display: "flex",
+        marginRight: "auto",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        textAlign: "left",
         height: "400px",
-        borderRadius: "16px",
-        background: "radial-gradient(circle at top, #0b0f1a, #05070d)"
+        borderRadius: "15px",
+        marginRight: "auto",
+        border: "#b9bbbc solid 2px",
+        marginLeft: "10%",
+        marginRight: "10%",
+        
       }}
     />
   );

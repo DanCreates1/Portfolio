@@ -6,7 +6,7 @@
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-   scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 
 .hero{
@@ -401,9 +401,18 @@
 
 /* WhoAmI Section */
 
-.WhoAmI{
+#WhoAmI{
+  margin-top: 15vh;
   display: flex;
   flex-direction: column;
+}
+
+.WhoAmI > div{
+  display: flex;
+  flex-direction: row;
+  font-size:3.5rem;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
