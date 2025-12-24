@@ -15,7 +15,6 @@ function App() {
     <div>
        <Hero/>
        <WhoAmI/>
-      <RubiksCube/>
        <Projects/>
       <Contact/>
     </div>
