@@ -50,7 +50,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="Contact">
+        <section className="Contact" id='contact'>
             <div className="contactContainer">
                 <h2 className="contactTitle">Get In Touch</h2>
                 <p className="contactSubtitle">

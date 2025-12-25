@@ -188,7 +188,7 @@ export default function Hero() {
           IB student
         </span>
 
-        <button id="getInTouchButton">Get In Touch</button>
+        <button id="getInTouchButton"><a href="#contact">Get In Touch</a></button>
     </span>
 
         <div className="heroImage">
