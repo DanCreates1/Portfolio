@@ -138,7 +138,7 @@ scene.add(rimLight);
         alignItems: "center",
         textAlign: "left",
         height: "400px",
-        borderRadius: "15px",
+        borderRadius: "10px",
         marginRight: "auto",
         border: "#b9bbbc solid 2px",
         marginLeft: "10%",
