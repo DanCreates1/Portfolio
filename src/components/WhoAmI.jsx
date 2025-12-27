@@ -8,11 +8,28 @@ export default function WhoAmI() {
             <RubiksCube />
          </div>
          <div className="WhoAmIText">
-            Grade 10 student in the IB program with a focus on coding, fitness, and continuous learning. 
-            I enjoy building web applications that are practical and easy to use, while developing skills
-            in web development through self-directed projects. Outside of coding, I'm training to become
-            a certified lifeguard, working out regularly, and exploring new technologies. This portfolio
-            highlights ongoing work and progress in both academics and personal development.
+            <p>
+            Hi! My name is Daniel. I’m a Grade 10 IB student interested in coding,
+            fitness, and learning new things over time. I didn’t grow up knowing how
+            to code or build websites—most of what I know now comes from trial and error
+            and spending a lot of time working on projects.
+            </p>
+            <p>
+               As I learned more, I realized I enjoy writing code and building websites
+               that actually do something useful. I often start with a basic idea, then
+               slowly improve it by fixing bugs, changing layouts, and adding features.
+               Some things work right away, others don’t, but each project helps me understand how things work a bit better.
+            </p>
+            <p>
+               Outside of coding, I’m training to become a certified lifeguard and keep
+               a consistent workout routine. Both require showing up regularly and staying
+               focused, even when things get tiring. That same mindset carries over when I’m
+               stuck on a problem or learning something new.
+            </p>
+            <p>
+               This website is a place where I keep track of what I’m building, what I’m learning,
+               and how my skills are improving over time—both in school and outside of it.
+            </p>
          </div>
       </div>
    </section>

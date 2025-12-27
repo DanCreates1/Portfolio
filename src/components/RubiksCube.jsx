@@ -119,9 +119,19 @@ scene.add(rimLight);
     };
     window.addEventListener("resize", handleResize);
 
+    // Observe container size changes (for when text box grows/shrinks) and resize renderer accordingly
+    let resizeObserver;
+    if (typeof ResizeObserver !== 'undefined') {
+      resizeObserver = new ResizeObserver(() => {
+        handleResize();
+      });
+      resizeObserver.observe(container);
+    }
+
     // Cleanup (important in React)
     return () => {
       window.removeEventListener("resize", handleResize);
+      if (resizeObserver) resizeObserver.disconnect();
       container.removeChild(renderer.domElement);
       renderer.dispose();
     };
