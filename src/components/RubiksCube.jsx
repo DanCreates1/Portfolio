@@ -128,23 +128,6 @@ scene.add(rimLight);
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      style={{
-        width: "40%",
-        display: "flex",
-        marginRight: "auto",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        textAlign: "left",
-        height: "400px",
-        borderRadius: "10px",
-        marginRight: "auto",
-        border: "#b9bbbc solid 2px",
-        marginLeft: "10%",
-        marginRight: "10%",
-        
-      }}
-    />
+    <div ref={containerRef} className="rubiks-canvas" />
   );
 }
