@@ -4,7 +4,7 @@
   box-sizing: border-box;
   background-color: #0B1215;
   scroll-behavior: smooth;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
   color: white;
   scroll-margin-top: 80px;
 }
@@ -14,6 +14,7 @@
   margin-right: 10%;
 }
 
+/* Full-width wrapper: transparent so only the centered bar shows blur */
 .navBar{
   display: flex;
   justify-content: center;
@@ -21,13 +22,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(22, 22, 22, 0.3); /* semi-transparent */
-  backdrop-filter: blur(10px);          /* the blur effect */
-  -webkit-backdrop-filter: blur(10px);  /* for Safari */
+  background: transparent;
   z-index: 1000;
   padding: 1rem;
 }
 
+/* The visible bar (centered, rounded) now holds the background + blur */
 .navBar > ul{
   gap: 1rem;
   display: flex;
@@ -35,7 +35,6 @@
   align-items: center;
   padding: 1rem;
   border: 2px white solid;
-  border-radius: 30px;
 }
 
 .navBar > ul > li{
@@ -120,7 +119,7 @@
   color: cyan;
   background: transparent;
   border: 2px solid cyan;
-  border-radius: 30px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
@@ -176,8 +175,7 @@
 .scene .inner span{
   display: inline-block;
   padding: 6px 10px;
-  border-radius: 10px;
-  
+  border-radius: 20px;
   font-weight: 600;
   transform: rotate(calc(-1 * var(--angle)));
   pointer-events: auto;
@@ -249,7 +247,7 @@
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    border-radius: 16px;
+    border-radius: 20px;
   }
 
   .navBar > ul > li{ font-size: 1rem; }
@@ -325,7 +323,7 @@
     gap: 0.6rem;
     align-items: center;
     justify-content: center;
-    border-radius: 16px;
+    border-radius: 20px;
   }
 
   .navBar > ul > li{ font-size: 1rem; }
@@ -371,29 +369,75 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(22, 22, 22, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: transparent;
   z-index: 1000;
   padding: 1rem;
 }
 
+/* Centered rounded bar gets the translucent background + blur */
 .navBar > ul{
-  gap: 1rem;
+  gap: 0.5rem;
   display: flex;
   flex-direction: row;   /* forced row */
   flex-wrap: nowrap;     /* prevent column wrapping */
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  border: 2px white solid;
+  border: 2px solid rgba(255,255,255,0.12);
   border-radius: 30px;
   overflow-x: auto;      /* allow scroll on small screens */
   scrollbar-width: none;
+
+  /* visible bar background and stronger blur to increase contrast */
+  background: linear-gradient(rgba(3,10,15,0.65), rgba(11,18,21,0.65));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 600ms ease, backdrop-filter 600ms ease, box-shadow 600ms ease, transform 300ms ease;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45), inset 0 0 18px rgba(0,255,255,0.02);
+  will-change: background, backdrop-filter, box-shadow;
 }
+
+
+
+
+/* When the page is scrolled, make the bar more transparent so the background remains visible */
+.navBar.scrolled > ul {
+  background: linear-gradient(rgba(3,10,15,0.18), rgba(11,18,21,0.12));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border: 2px solid rgba(255,255,255,0.06);
+  transform: none;
+} 
 
 .navBar > ul::-webkit-scrollbar{
   display: none;
+}
+
+/* ensure list items and links are transparent and touch-friendly */
+.navBar > ul { background: transparent; }
+.navBar > ul > li { background: transparent; }
+
+.navBar > ul > li > a {
+  background-color: transparent !important;
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; /* mobile highlight */
+  transition: color 200ms ease, background-color 200ms ease, transform 150ms ease;
+}
+
+.navBar > ul > li > a:hover,
+.navBar > ul > li > a:focus {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+  background-color: rgba(0,255,255,0.03); /* very subtle highlight, not black */
+}
+
+.navBar > ul > li > a:active {
+  background-color: transparent;
 }
 
 /* WhoAmI section */
@@ -409,8 +453,7 @@
 .WhoAmIHeading{
   font-size: 2rem;
   font-weight: 700;
-  align-self: flex-start;
-  margin-left: 5%;
+  align-self:auto;
 }
 
 .WhoAmIContainer{
@@ -445,16 +488,22 @@
   max-width: 60ch;
   padding: 1.25rem 1.5rem;
   display: flex;
+  flex-direction: column;
   align-items: center; /* vertically centre the text */
-  background: rgba(255,255,255,0.04); /* lighter than main background */
+ 
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
   backdrop-filter: blur(6px);
 }
 .WhoAmIText > p{
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
+  margin-top: 20px;
+  box-shadow: 0 8px 30px rgba(46, 46, 46, 0.6);
+  border-radius: 20px;
+}
+
+#blueText{
+  color: cyan;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
 }
 
 @media (max-width: 860px){
