@@ -104,12 +104,14 @@
 
 .heroImage{
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  gap: 24px;
+  align-items: flex-end; /* align children to the right on wide screens */
+  gap: 80px;
   margin-top: -250px;
   flex-wrap: nowrap;
-}
+  margin-bottom: 120px;
+} 
 
 #getInTouchButton{
   width: 150px;
@@ -131,6 +133,10 @@
   height: 320px;        
   position: relative;   
   flex: 0 0 320px;
+  display: flex;
+  background: transparent;
+  background-color: transparent;
+  
 }
 
 .scene .avatar{
@@ -144,7 +150,8 @@
   border-radius: 50%;
   z-index: 3;           
   pointer-events: auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  background: transparent;
+  background-color: transparent;
 }
 
 .scene .orbit{
@@ -187,14 +194,17 @@
 
 @keyframes spin-reverse { to { transform: rotate(-360deg); } }
 
-.status{
+.scene .status{
+  position: absolute;
+  left: 50%;
+  top: 50%; /* anchor to avatar center */
+  transform: translate(-50%, calc(50% + 12px)); /* move to bottom of avatar + offset */
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 3.9rem;
-  font-size: 1.1rem;
-  justify-content: flex-end;
-  margin-right: 10%;
+  font-size: 1.05rem;
+  justify-content: center;
+  z-index: 4;
 }
 
 .scrollDown{
@@ -275,13 +285,13 @@
 
   .overView > p{ font-size: 1.15rem; }
 
-  .heroImage{ margin-top: -60px; }
+  .heroImage{ margin-top: -60px; align-items: center; }
 
   .scene{ width: 200px; height: 200px; flex: 0 0 200px; }
   .scene .avatar{ width: 140px; height: 140px; }
   .scene .inner span{ font-size: 12px; padding: 4px 6px; }
 
-  .status{ justify-content: center; margin-right: 0; }
+  .scene .status{ position: static; transform: none; left: auto; top: auto; justify-content: center; margin-right: 0; margin-top: 0.5rem; }
 
   .scrollDown{ font-size: 2.2rem; }
 }
@@ -351,13 +361,13 @@
 
   .overView > p{ font-size: 1.15rem; }
 
-  .heroImage{ margin-top: -60px; }
+  .heroImage{ margin-top: -60px; align-items: center; }
 
   .scene{ width: 200px; height: 200px; flex: 0 0 200px; }
   .scene .avatar{ width: 140px; height: 140px; }
   .scene .inner span{ font-size: 12px; padding: 4px 6px; }
 
-  .status{ justify-content: center; margin-right: 0; }
+  .scene .status{ position: static; transform: none; left: auto; top: auto; justify-content: center; margin-right: 0; margin-top: 0.5rem; }
 
   .scrollDown{ font-size: 2.2rem; }
 }
