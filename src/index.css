@@ -63,7 +63,7 @@
         }
 
 .welcome{
-  margin-top: 13%;
+  margin-top: 10%;
   transform: translateY(100%);
   font-size: 1.4rem;
   height: 50px; 
@@ -210,7 +210,6 @@
 .scrollDown{
   display: flex;
   justify-content: center;
-  margin-top: 1.5rem;
   font-size: 3.5rem;
 }
 
@@ -291,9 +290,24 @@
   .scene .avatar{ width: 140px; height: 140px; }
   .scene .inner span{ font-size: 12px; padding: 4px 6px; }
 
-  .scene .status{ position: static; transform: none; left: auto; top: auto; justify-content: center; margin-right: 0; margin-top: 0.5rem; }
+  .scene .status{
+    display: flex;
+    flex-direction: column; 
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    justify-content: center;
+    margin-right: 0;
+    margin-top: 0.5rem;
+   }
 
-  .scrollDown{ font-size: 2.2rem; }
+  .scrollDown{ 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.2rem;
+   }
 }
 
 /* Responsive: Hero section adjustments */
