@@ -500,12 +500,13 @@
   align-self: flex-start; /* allow the wrapper to be sized by the text box */
 }
 .rubiks-canvas{
+  margin-top: 7%;
   width: 100%;
   height: 100%; /* fill the wrapper height so it matches text box */
   min-height: 320px;
   max-height: 600px;
-  border-radius: 10px;
-  border: #b9bbbc solid 2px;
+  border-radius: 12px;
+  border: 3px solid rgba(255,255,255,0.1);
 }
 
 .WhoAmIText{

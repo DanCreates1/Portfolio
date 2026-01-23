@@ -15,20 +15,20 @@ export default function WhoAmI() {
             and spending a lot of time working on projects.
             </p>
             <p>
-               As I learned more, I realized I enjoy writing code and building websites
+               As I learned more, I realized I enjoy writing code and <span id="blueText">building websites </span>
                that actually do something useful. I often start with a basic idea, then
                slowly improve it by fixing bugs, changing layouts, and adding features.
                Some things work right away, others don’t, but each project helps me <span id="blueText">understand how things work</span> a bit better.
             </p>
             <p>
-               Outside of coding, I’m training to become a certified lifeguard and keep
+               Outside of coding, I’m training to become a<span id="blueText"> certified lifeguard</span> and keep
                a consistent workout routine. Both require showing up regularly and staying
                focused, even when things get tiring. That same mindset carries over when I’m
                stuck on a problem or learning something new.
             </p>
             <p>
-               This website is a place where I keep track of what I’m building, what I’m learning,
-               and how my skills are improving over time—both in school and outside of it.
+               This website is a place where I keep track of what I’m <span id="blueText">building</span>, what I’m <span id="blueText">learning</span>,
+               and how my skills are <span id="blueText">improving</span> over time—both in school and outside of it.
             </p>
          </div>
       </div>
