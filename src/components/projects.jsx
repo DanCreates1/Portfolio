@@ -40,6 +40,25 @@ export default function Projects() {
               <a href="https://cars-phi-ten.vercel.app"  target="_blank"><button>View Project</button></a>
             </div>
 
+
+            <div className="card">
+              <img src=" /projectsImg/ClashRoyaleAITutor.png" alt=""  />
+              <h2>Dusic</h2>
+              <p>
+               AI Clash Royale Tutor is an intelligent tool that analyzes gameplay and provides
+               real-time strategic advice, helping players improve decision-making, deck usage, and overall performance in Clash Royale.
+              </p>
+               <div className="techStack">
+              <i class="fa-brands fa-react"  style={{ color: "cyan" }}></i>
+                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
+                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
+                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
+                  <i class="fa-brands fa-npm" style={{ color: "#CC3534" }}></i>
+                  </div>
+              <a href="https://github.com/DanCreates1/Dusic"  target="_blank"><button>View Project</button></a>
+            </div>
+            
+
              <div className="card">
               <img src=" /projectsImg/revenda.png" alt=""  />
               <h2>Revenda</h2>
