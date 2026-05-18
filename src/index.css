@@ -337,6 +337,7 @@ section {
   margin-top: 0.9rem;
 }
 
+.blueText,
 #blueText {
   color: var(--accent);
 }

@@ -12,26 +12,28 @@ export default function WhoAmI() {
         </div>
         <div className="WhoAmIText">
           <p>
-            Hi! My name is Daniel. I am a Grade 10 IB student interested in coding, fitness, and
-            learning new things over time. I did not grow up knowing how to code or build
-            websites, and most of what I know now <span id="blueText">comes from trial and error</span>{" "}
-            plus many hours building projects.
+            I&apos;m Daniel, an IBCP student from Ontario focused on building at the intersection of{" "}
+            <span className="blueText">web development and AI</span>. I did not start with a big
+            technical background, so most of my progress came from{" "}
+            <span className="blueText">trial, iteration, and consistency</span> rather than shortcuts.
           </p>
           <p>
-            As I learned more, I realized I enjoy writing code and{" "}
-            <span id="blueText">building websites</span> that solve real problems. I usually start
-            with a basic idea, then improve it by fixing bugs, adjusting layouts, and adding
-            features. Each project helps me <span id="blueText">understand systems deeper</span>.
+            What keeps me motivated is turning ideas into things people can actually use. I enjoy
+            working on <span className="blueText">AI-powered tools</span>, responsive interfaces, and
+            projects where I can improve both logic and design. Every build helps me strengthen{" "}
+            <span className="blueText">problem-solving, product thinking, and execution</span>.
           </p>
           <p>
-            Outside of coding, I am training to become a <span id="blueText">certified lifeguard</span>{" "}
-            and keep a consistent workout routine. Both require discipline and showing up every
-            day. That mindset carries over whenever I am stuck on a problem.
+            Outside of tech, I train consistently and work toward lifeguard certification. That
+            routine reinforces discipline, and I bring that same approach into coding by showing up
+            daily, shipping updates, and learning from mistakes. For me, growth is about{" "}
+            <span className="blueText">long-term consistency over short-term hype</span>.
           </p>
           <p>
-            This website is where I track what I am <span id="blueText">building</span>, what I am{" "}
-            <span id="blueText">learning</span>, and how my skills are{" "}
-            <span id="blueText">improving</span> over time.
+            This portfolio is my public log of what I am{" "}
+            <span className="blueText">building, learning, and improving</span>. My direction is
+            clear: keep sharpening my skills and build projects that combine{" "}
+            <span className="blueText">practical AI with clean user experience</span>.
           </p>
         </div>
       </div>

@@ -26,7 +26,16 @@ const DELETE_SPEED = 95;
 const WORD_PAUSE = 1000;
 
 export default function Hero() {
-  const orbitRoles = ["Motivate", "Create", "Ship", "Learn", "Code", "Front-End", "Grow", "Repeat"];
+  const orbitRoles = [
+    "Prompting",
+    "Agents",
+    "RAG",
+    "Vision AI",
+    "NLP",
+    "Embeddings",
+    "Inference",
+    "Deployment",
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
