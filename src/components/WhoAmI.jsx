@@ -12,28 +12,22 @@ export default function WhoAmI() {
         </div>
         <div className="WhoAmIText">
           <p>
-            I&apos;m Daniel, an IBCP student from Ontario focused on building at the intersection of{" "}
-            <span className="blueText">web development and AI</span>. I did not start with a big
-            technical background, so most of my progress came from{" "}
-            <span className="blueText">trial, iteration, and consistency</span> rather than shortcuts.
+            Hello there! My name is Daniel. I&apos;m a Grade 10 student specializing in AI,
+            automation and software engineering.
           </p>
           <p>
-            What keeps me motivated is turning ideas into things people can actually use. I enjoy
-            working on <span className="blueText">AI-powered tools</span>, responsive interfaces, and
-            projects where I can improve both logic and design. Every build helps me strengthen{" "}
-            <span className="blueText">problem-solving, product thinking, and execution</span>.
+            The vast majority of my skills have been acquired independently, through personal
+            research and building projects from scratch. I am particularly passionate about topics
+            such as machine learning, computer vision, neural networks, and real-world AI
+            applications.
           </p>
           <p>
-            Outside of tech, I train consistently and work toward lifeguard certification. That
-            routine reinforces discipline, and I bring that same approach into coding by showing up
-            daily, shipping updates, and learning from mistakes. For me, growth is about{" "}
-            <span className="blueText">long-term consistency over short-term hype</span>.
+            Creating AI-based software and training and optimizing models is something I enjoy
+            doing using tools such as Python, TensorFlow, OpenCV and MediaPipe. I always seek to
+            learn more about new AI concepts and improve my skills through practice.
           </p>
           <p>
-            This portfolio is my public log of what I am{" "}
-            <span className="blueText">building, learning, and improving</span>. My direction is
-            clear: keep sharpening my skills and build projects that combine{" "}
-            <span className="blueText">practical AI with clean user experience</span>.
+            This is the place where I publish my projects, experiments and work in AI.
           </p>
         </div>
       </div>
