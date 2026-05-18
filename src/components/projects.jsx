@@ -1,131 +1,203 @@
+import { useEffect, useState } from "react";
+
+const projects = [
+  {
+    title: "Codeva Front-end",
+    description:
+      "I worked with the Codeva front-end team to ship a production-ready website with a polished UI and clean component structure.",
+    image: "/projectsImg/codeva.png",
+    alt: "Codeva project screenshot",
+    link: "https://www.codeva.xyz",
+    tech: [
+      { type: "icon", className: "fa-brands fa-react", color: "cyan" },
+      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
+      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
+      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
+      { type: "image", src: "/ProgrammingIcons/tailwindCssLogo.png", alt: "Tailwind CSS logo" },
+      { type: "icon", className: "fa-brands fa-npm", color: "#CC3534" },
+    ],
+  },
+  {
+    title: "AI Sign Language Detector",
+    description:
+      "A self-trained AI tool that detects sign language letters with live hand-tracking to explore computer vision and machine learning.",
+    image: "/projectsImg/ASL.png",
+    alt: "AI sign language detector screenshot",
+    link: "https://cars-phi-ten.vercel.app",
+    tech: [
+      { type: "image", src: "/ProgrammingIcons/python.png", alt: "Python logo" },
+      { type: "image", src: "/ProgrammingIcons/scikitLearn.png", alt: "Scikit-learn logo" },
+      { type: "image", src: "/ProgrammingIcons/numpy.png", alt: "NumPy logo" },
+      { type: "image", src: "/ProgrammingIcons/Tensorflow_logo.svg.png", alt: "TensorFlow logo" },
+      { type: "image", src: "/ProgrammingIcons/mediaPipe.png", alt: "MediaPipe logo" },
+    ],
+  },
+  {
+    title: "AI Clash Royale Tutor",
+    description:
+      "An assistant that analyzes gameplay and suggests strategy in real time to improve deck usage and match decisions.",
+    image: "/projectsImg/ClashRoyaleAITutor.png",
+    alt: "AI Clash Royale tutor screenshot",
+    link: "https://github.com/DanCreates1/Dusic",
+    tech: [
+      { type: "icon", className: "fa-brands fa-react", color: "cyan" },
+      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
+      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
+      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
+      { type: "icon", className: "fa-brands fa-npm", color: "#CC3534" },
+    ],
+  },
+  {
+    title: "Revenda",
+    description:
+      "A modern marketing site I built for a web design agency with clean branding and responsive layouts.",
+    image: "/projectsImg/Revenda.png",
+    alt: "Revenda website screenshot",
+    link: "https://rendeva.vercel.app",
+    tech: [
+      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
+      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
+      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
+    ],
+  },
+  {
+    title: "Portfolio V1",
+    description:
+      "My first portfolio website where I learned core web layout and responsive design fundamentals.",
+    image: "/projectsImg/oldPortfolio.png",
+    alt: "Portfolio version 1 screenshot",
+    link: "https://dancreates1.github.io/Pouyan",
+    tech: [
+      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
+      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
+      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
+    ],
+  },
+  {
+    title: "Portfolio V2",
+    description:
+      "A redesigned portfolio focused on improved layout, performance, and cleaner project presentation.",
+    image: "/projectsImg/portfolioV2.png",
+    alt: "Portfolio version 2 screenshot",
+    link: "https://dancreates1.github.io/Dan-Creates/",
+    tech: [
+      { type: "icon", className: "fa-brands fa-react", color: "cyan" },
+      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
+      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
+      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
+      { type: "icon", className: "fa-brands fa-npm", color: "#CC3534" },
+    ],
+  },
+  {
+    title: "Dusic",
+    description:
+      "A lightweight web app that shows your currently playing Spotify track in real time for simple and stylish sharing.",
+    image: "/projectsImg/Dusic.png",
+    alt: "Dusic app screenshot",
+    link: "https://github.com/DanCreates1/Dusic",
+    tech: [
+      { type: "icon", className: "fa-brands fa-react", color: "cyan" },
+      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
+      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
+      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
+      { type: "icon", className: "fa-brands fa-npm", color: "#CC3534" },
+    ],
+  },
+];
+
 export default function Projects() {
-    return(
-        <section id="Projects">
-        <div className="Projects">
-          <h1>My Projects</h1>
-          </div>
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = projects.length;
 
-          <div className="projectCards">
-           
-            <div className="card">
-              <img src=" /projectsImg/codeva.png" alt="Project Codeva picture"  />
-              <h2>Codeva Front-end</h2>
-              <p>Me and the Front-End team of the Codeva worked to gether to make this website live and ready for production</p>
-              <div className="techStack">
-                  <i class="fa-brands fa-react"  style={{ color: "cyan" }}></i>
-                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
-                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
-                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
-                  <img src="/ProgrammingIcons/tailwindCssLogo.png" alt="tailwind Css Logo" />
-                  <i class="fa-brands fa-npm" style={{ color: "#CC3534" }}></i>
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return undefined;
 
-              </div>
-              <a href="https://www.codeva.xyz"  target="_blank"><button>View Project</button></a>
-            </div>
-            
-            <div className="card">
-              <img src=" /projectsImg/ASL.png" alt=""  />
-              <h2>AI Sign Language Detector</h2>
-              <p>
-                A self-trained and fully built AI tool that detects sign language letters
-                using live hand-tracking, created to explore computer vision and machine learning.
-              </p>
-              <div className="techStack">
-                  <img src="/ProgrammingIcons/python.png" alt="tailwind Css Logo" />
-                  <img src="/ProgrammingIcons/scikitLearn.png" alt="scikitLearn logo" />
-                  <img src="/ProgrammingIcons/numpy.png" alt="numpy" />
-                  <img src="/ProgrammingIcons/Tensorflow_logo.svg.png" alt="Tensorflow logo" />
-                  <img src="/ProgrammingIcons/mediaPipe.png" alt="" />
-                  </div>
-              <a href="https://cars-phi-ten.vercel.app"  target="_blank"><button>View Project</button></a>
-            </div>
+    const autoplayId = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 2000);
 
+    return () => clearInterval(autoplayId);
+  }, [totalSlides]);
 
-            <div className="card">
-              <img src=" /projectsImg/ClashRoyaleAITutor.png" alt=""  />
-              <h2>Dusic</h2>
-              <p>
-               AI Clash Royale Tutor is an intelligent tool that analyzes gameplay and provides
-               real-time strategic advice, helping players improve decision-making, deck usage, and overall performance in Clash Royale.
-              </p>
-               <div className="techStack">
-              <i class="fa-brands fa-react"  style={{ color: "cyan" }}></i>
-                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
-                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
-                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
-                  <i class="fa-brands fa-npm" style={{ color: "#CC3534" }}></i>
-                  </div>
-              <a href="https://github.com/DanCreates1/Dusic"  target="_blank"><button>View Project</button></a>
-            </div>
-            
+  const goToPrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
 
-             <div className="card">
-              <img src=" /projectsImg/revenda.png" alt=""  />
-              <h2>Revenda</h2>
-              <p>
-                A clean and modern website I built for a web design agency.
-                It highlights their services and branding with a fully responsive layout.
-              </p>
-               <div className="techStack">
-                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
-                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
-                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
-                  </div>
-              <a href="https://rendeva.vercel.app"  target="_blank"><button>View Project</button></a>
-            </div>
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
 
-             <div className="card">
-              <img src=" /projectsImg/oldPortfolio.png" alt=""  />
-              <h2>Portfolio V1</h2>
-              <p>
-                My first ever portfolio website, where I learned the
-                basics of web design, layout, and responsive pages.
-              </p>
-              <div className="techStack">
-                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
-                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
-                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
-                  </div>
-              <a href="https://dancreates1.github.io/Pouyan"  target="_blank"><button>View Project</button></a>
-            </div>
+  return (
+    <section id="Projects" className="Projects">
+      <h1>My Projects</h1>
 
-            <div className="card">
-                <img src=" /projectsImg/portfolioV2.png" alt=""  />
-                <h2>Portfolio V2</h2>
-                <p>
-                  A redesigned and self-made portfolio built to improve layout, 
-                  performance, and modern styling while showcasing my latest projects
-                </p>
+      <div className="projectsSlider" aria-label="Projects slider">
+        <button
+          className="projectNavButton"
+          type="button"
+          aria-label="Previous project"
+          onClick={goToPrev}
+        >
+          <i className="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
+        <div className="projectViewport">
+          <div className="projectTrack" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            {projects.map((project) => (
+              <article className="card projectSlide" key={project.title}>
+                <img src={project.image} alt={project.alt} loading="lazy" />
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+
                 <div className="techStack">
-                <i class="fa-brands fa-react"  style={{ color: "cyan" }}></i>
-                    <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
-                    <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
-                    <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
-                    <i class="fa-brands fa-npm" style={{ color: "#CC3534" }}></i>
-                    </div>
-                <a href="https://dancreates1.github.io/Dan-Creates/"  target="_blank"><button>View Project</button></a>
-            </div>
+                  {project.tech.map((item, index) => {
+                    if (item.type === "image") {
+                      return <img key={`${project.title}-${index}`} src={item.src} alt={item.alt} />;
+                    }
 
-      <div className="card">
-              <img src=" /projectsImg/Dusic.png" alt=""  />
-              <h2>Dusic</h2>
-              <p>
-                Dusic is a lightweight web tool that displays your current Spotify track in
-                real time, designed to make sharing what you’re listening to simple and stylish.
-              </p>
-               <div className="techStack">
-              <i class="fa-brands fa-react"  style={{ color: "cyan" }}></i>
-                  <i class="fa-brands fa-square-js" style={{ color: "yellow" }}></i>
-                  <i class="fa-brands fa-css3-alt" style={{ color: "#17f3ff" }}></i>
-                  <i class="fa-brands fa-html5" style={{ color: "#e34c26" }}></i>
-                  <i class="fa-brands fa-npm" style={{ color: "#CC3534" }}></i>
-                  </div>
-              <a href="https://github.com/DanCreates1/Dusic"  target="_blank"><button>View Project</button></a>
-            </div>
+                    return (
+                      <i
+                        key={`${project.title}-${index}`}
+                        className={item.className}
+                        style={{ color: item.color }}
+                        aria-hidden="true"
+                      ></i>
+                    );
+                  })}
+                </div>
 
-            
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  View Project
+                </a>
+              </article>
+            ))}
           </div>
-        </section>
-    )
+        </div>
 
+        <button
+          className="projectNavButton"
+          type="button"
+          aria-label="Next project"
+          onClick={goToNext}
+        >
+          <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div className="projectDots" role="tablist" aria-label="Select project slide">
+        {projects.map((project, index) => (
+          <button
+            key={project.title}
+            className={`projectDot${currentSlide === index ? " active" : ""}`}
+            onClick={() => setCurrentSlide(index)}
+            type="button"
+            aria-label={`Go to ${project.title}`}
+            aria-selected={currentSlide === index}
+            role="tab"
+          ></button>
+        ))}
+      </div>
+    </section>
+  );
 }

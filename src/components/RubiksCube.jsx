@@ -7,6 +7,7 @@ export default function RubiksCube() {
 
   useEffect(() => {
     const container = containerRef.current;
+    if (!container) return undefined;
 
     // Scene
     const scene = new THREE.Scene();
@@ -23,19 +24,19 @@ export default function RubiksCube() {
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
     // Lights
     scene.add(new THREE.AmbientLight(0xffffff, 0.45));
 
-const keyLight = new THREE.DirectionalLight(0xffffff, 0.9);
-keyLight.position.set(6, 8, 10);
-scene.add(keyLight);
+    const keyLight = new THREE.DirectionalLight(0xffffff, 0.9);
+    keyLight.position.set(6, 8, 10);
+    scene.add(keyLight);
 
-const rimLight = new THREE.DirectionalLight(0x88aaff, 0.4);
-rimLight.position.set(-6, -4, -6);
-scene.add(rimLight);
+    const rimLight = new THREE.DirectionalLight(0x88aaff, 0.4);
+    rimLight.position.set(-6, -4, -6);
+    scene.add(rimLight);
 
 
     // Rubik’s Cube
@@ -43,44 +44,44 @@ scene.add(rimLight);
     const size = 0.95;
     const geometry = new THREE.BoxGeometry(size, size, size);
 
-   const materials = [
-  new THREE.MeshPhysicalMaterial({
-    color: 0xff3b3b,
-    roughness: 0.35,
-    metalness: 0.05,
-    clearcoat: 0.4
-  }),
-  new THREE.MeshPhysicalMaterial({
-    color: 0xff8c1a,
-    roughness: 0.35,
-    metalness: 0.05,
-    clearcoat: 0.4
-  }),
-  new THREE.MeshPhysicalMaterial({
-    color: 0xf5f5f5,
-    roughness: 0.3,
-    metalness: 0.05,
-    clearcoat: 0.45
-  }),
-  new THREE.MeshPhysicalMaterial({
-    color: 0xffd500,
-    roughness: 0.3,
-    metalness: 0.05,
-    clearcoat: 0.45
-  }),
-  new THREE.MeshPhysicalMaterial({
-    color: 0x00d26a,
-    roughness: 0.35,
-    metalness: 0.05,
-    clearcoat: 0.4
-  }),
-  new THREE.MeshPhysicalMaterial({
-    color: 0x1e6bff,
-    roughness: 0.35,
-    metalness: 0.05,
-    clearcoat: 0.4
-  })
-];
+    const materials = [
+      new THREE.MeshPhysicalMaterial({
+        color: 0xff3b3b,
+        roughness: 0.35,
+        metalness: 0.05,
+        clearcoat: 0.4,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: 0xff8c1a,
+        roughness: 0.35,
+        metalness: 0.05,
+        clearcoat: 0.4,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: 0xf5f5f5,
+        roughness: 0.3,
+        metalness: 0.05,
+        clearcoat: 0.45,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: 0xffd500,
+        roughness: 0.3,
+        metalness: 0.05,
+        clearcoat: 0.45,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: 0x00d26a,
+        roughness: 0.35,
+        metalness: 0.05,
+        clearcoat: 0.4,
+      }),
+      new THREE.MeshPhysicalMaterial({
+        color: 0x1e6bff,
+        roughness: 0.35,
+        metalness: 0.05,
+        clearcoat: 0.4,
+      }),
+    ];
 
 
     for (let x = -1; x <= 1; x++) {
@@ -104,8 +105,9 @@ scene.add(rimLight);
     controls.autoRotateSpeed = 1.2;
 
     // Animate
+    let animationFrameId = 0;
     const animate = () => {
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
       controls.update();
       renderer.render(scene, camera);
     };
@@ -130,8 +132,12 @@ scene.add(rimLight);
 
     // Cleanup (important in React)
     return () => {
+      cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", handleResize);
       if (resizeObserver) resizeObserver.disconnect();
+      controls.dispose();
+      geometry.dispose();
+      materials.forEach((material) => material.dispose());
       container.removeChild(renderer.domElement);
       renderer.dispose();
     };

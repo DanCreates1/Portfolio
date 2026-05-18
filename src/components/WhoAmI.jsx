@@ -1,37 +1,40 @@
 import RubiksCube from "./RubiksCube.jsx";
+
 export default function WhoAmI() {
-   return (
-   <section id="WhoAmI">
-      <h2 className="WhoAmIHeading">Who Am <span className="WhoAmISpan">I</span> ?</h2>
+  return (
+    <section id="WhoAmI">
+      <h2 className="WhoAmIHeading">
+        Who Am <span className="WhoAmISpan">I</span>?
+      </h2>
       <div className="WhoAmIContainer">
-         <div className="rubiks-wrapper">
-            <RubiksCube />
-         </div>
-         <div className="WhoAmIText">
-            <p>
-            Hi! My name is Daniel. I’m a Grade 10 IB student interested in coding,
-            fitness, and learning new things over time. I didn’t grow up knowing how
-            to code or build websites—most of what I know now <span id="blueText">comes from trial and error</span>
-            and spending a lot of time working on projects.
-            </p>
-            <p>
-               As I learned more, I realized I enjoy writing code and <span id="blueText">building websites </span>
-               that actually do something useful. I often start with a basic idea, then
-               slowly improve it by fixing bugs, changing layouts, and adding features.
-               Some things work right away, others don’t, but each project helps me <span id="blueText">understand how things work</span> a bit better.
-            </p>
-            <p>
-               Outside of coding, I’m training to become a<span id="blueText"> certified lifeguard</span> and keep
-               a consistent workout routine. Both require showing up regularly and staying
-               focused, even when things get tiring. That same mindset carries over when I’m
-               stuck on a problem or learning something new.
-            </p>
-            <p>
-               This website is a place where I keep track of what I’m <span id="blueText">building</span>, what I’m <span id="blueText">learning</span>,
-               and how my skills are <span id="blueText">improving</span> over time—both in school and outside of it.
-            </p>
-         </div>
+        <div className="rubiks-wrapper">
+          <RubiksCube />
+        </div>
+        <div className="WhoAmIText">
+          <p>
+            Hi! My name is Daniel. I am a Grade 10 IB student interested in coding, fitness, and
+            learning new things over time. I did not grow up knowing how to code or build
+            websites, and most of what I know now <span id="blueText">comes from trial and error</span>{" "}
+            plus many hours building projects.
+          </p>
+          <p>
+            As I learned more, I realized I enjoy writing code and{" "}
+            <span id="blueText">building websites</span> that solve real problems. I usually start
+            with a basic idea, then improve it by fixing bugs, adjusting layouts, and adding
+            features. Each project helps me <span id="blueText">understand systems deeper</span>.
+          </p>
+          <p>
+            Outside of coding, I am training to become a <span id="blueText">certified lifeguard</span>{" "}
+            and keep a consistent workout routine. Both require discipline and showing up every
+            day. That mindset carries over whenever I am stuck on a problem.
+          </p>
+          <p>
+            This website is where I track what I am <span id="blueText">building</span>, what I am{" "}
+            <span id="blueText">learning</span>, and how my skills are{" "}
+            <span id="blueText">improving</span> over time.
+          </p>
+        </div>
       </div>
-   </section>
-   )
+    </section>
+  );
 }
