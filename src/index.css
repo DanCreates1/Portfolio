@@ -201,7 +201,7 @@ section {
 }
 
 .scene {
-  --orbit-radius: clamp(145px, 62%, 220px);
+  --orbit-radius: clamp(170px, 72%, 255px);
   --orbit-speed: 10s;
   width: clamp(220px, 32vw, 320px);
   aspect-ratio: 1 / 1;
@@ -278,6 +278,7 @@ section {
   gap: 0.6rem;
   font-size: 1rem;
   color: var(--muted);
+  margin-top: 0.9rem;
 }
 
 .scrollDown {
@@ -614,7 +615,7 @@ section {
 
   .scene {
     margin-top: 0.4rem;
-    --orbit-radius: clamp(124px, 56%, 180px);
+    --orbit-radius: clamp(145px, 64%, 210px);
   }
 
   .scrollDown {
@@ -676,7 +677,7 @@ section {
 
   .scene {
     width: clamp(220px, 66vw, 280px);
-    --orbit-radius: clamp(108px, 54%, 150px);
+    --orbit-radius: clamp(126px, 61%, 175px);
   }
 
   .scene .inner span {
