@@ -48,47 +48,6 @@ const projects = [
     ],
   },
   {
-    title: "Revenda",
-    description:
-      "A modern marketing site I built for a web design agency with clean branding and responsive layouts.",
-    image: "/projectsImg/Revenda.png",
-    alt: "Revenda website screenshot",
-    link: "https://rendeva.vercel.app",
-    tech: [
-      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
-      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
-      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
-    ],
-  },
-  {
-    title: "Portfolio V1",
-    description:
-      "My first portfolio website where I learned core web layout and responsive design fundamentals.",
-    image: "/projectsImg/oldPortfolio.png",
-    alt: "Portfolio version 1 screenshot",
-    link: "https://dancreates1.github.io/Pouyan",
-    tech: [
-      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
-      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
-      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
-    ],
-  },
-  {
-    title: "Portfolio V2",
-    description:
-      "A redesigned portfolio focused on improved layout, performance, and cleaner project presentation.",
-    image: "/projectsImg/portfolioV2.png",
-    alt: "Portfolio version 2 screenshot",
-    link: "https://dancreates1.github.io/Dan-Creates/",
-    tech: [
-      { type: "icon", className: "fa-brands fa-react", color: "cyan" },
-      { type: "icon", className: "fa-brands fa-square-js", color: "yellow" },
-      { type: "icon", className: "fa-brands fa-css3-alt", color: "#17f3ff" },
-      { type: "icon", className: "fa-brands fa-html5", color: "#e34c26" },
-      { type: "icon", className: "fa-brands fa-npm", color: "#CC3534" },
-    ],
-  },
-  {
     title: "Dusic",
     description:
       "A lightweight web app that shows your currently playing Spotify track in real time for simple and stylish sharing.",
@@ -115,7 +74,7 @@ export default function Projects() {
 
     const autoplayId = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 2000);
+    }, 2500);
 
     return () => clearInterval(autoplayId);
   }, [totalSlides]);
