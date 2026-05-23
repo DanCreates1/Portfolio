@@ -67,10 +67,12 @@ const Contact = () => {
 
       setSubmitted(true);
       resetForm();
-    } catch {
-      setError(
-        "Contact form is not configured yet or failed to send. Add EmailJS keys or VITE_CONTACT_EMAIL."
-      );
+    } catch (err) {
+      const details =
+        err?.text || err?.message || (typeof err === "string" ? err : "Unknown EmailJS error");
+      const status = err?.status ? ` (status: ${err.status})` : "";
+      console.error("EmailJS send failed:", err);
+      setError(`Message failed to send${status}: ${details}`);
     } finally {
       setLoading(false);
     }
